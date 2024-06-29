@@ -1,0 +1,48 @@
+﻿@using SchkalkaB.Models
+@model TimetableViewModel
+<div class="main_main">
+    <label>Здравствуйте, <label>@Model.Student.Name</label></label>
+    <label>Расписание на день</label>
+</div>
+<div class="info">
+    <img src="basik.png">
+    <div class="link_basik">
+        <a asp-controller="Timetable" asp-action="Parents">Родители</a>
+    </div>
+</div>
+<div class="basik">
+    <label>Расписание:</label>
+    <label>@Model.DateMy.DayOfWeek</label>
+    <label>@Model.DateMy.ToShortDateString()</label>
+    <div class="arrows">
+        <a asp-controller="Timetable" asp-action="Minus"><img src="/arr_two.png"></a>
+        <a asp-controller="Timetable" asp-action="Plus"><img src="/arr_one.png"></a>
+    </div>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <table>
+            <tr>
+                <td>Номер</td>
+                <td>Урок</td>
+                <td>Кабинет</td>
+                <td>Д/з</td>
+            </tr>
+            @foreach (TimeTable timeTable in Model.timeTables)
+            {
+                <tr>
+                    <td>@timeTable.NumLesson</td>
+                    <td>@timeTable.TeacherSubjectNavigation.SubjectNavigation.SubjectName</td>
+                    <td>@timeTable.Cabinet</td>
+                    <td>@timeTable.HomeWork</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="paw_extra_two">
+        <img src="/paw_main.png">
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@using SchkalkaB.Models
+@model TimetableViewModel
+<div class="main_main">
+    <label>Здравствуйте, @Model.Teacher.TeacherName @Model.Teacher.TeacherSurName</label>
+    <label>Списки добавлений и изменений</label>
+</div>
+<div class="info">
+    <img src="/basik.png">
+    <div class="link_basik">
+        <a asp-controller="Timetable" asp-action="IndexTeacher">Расписание</a>
+        <a asp-controller="Timetable" asp-action="Events">Мероприятия</a>
+    </div>
+</div>
+<div class="basik">
+    <label>Списки:</label>
+    <label>@DateTime.Today.DayOfWeek</label>
+    <label>@DateTime.Today.ToShortDateString()</label>
+    <label>Добавление, изменение и удаление</label>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <a asp-controller="User" asp-action="Registration">Добавить пользователя</a>
+        <a asp-controller="Timetable" asp-action="RegStudent">Добавить студента</a>
+        <a asp-controller="Timetable" asp-action="RegTeacher">Добавить учителя</a>
+        <a asp-controller="Timetable" asp-action="RegDirector">Добавить других</a>
+        <a asp-controller="Timetable" asp-action="SpisokStudents">Список учеников</a>
+        <a asp-controller="Timetable" asp-action="SpisokTeachers">Список учителей</a>
+        <a asp-controller="Timetable" asp-action="SpisokDirectors">Список директоров</a>
+    </div>
+    <div class="paw_extra_two_two">
+        <button class="butt">Будьте внимательны</button>
+        <img src="/paw_main.png">
+    </div>
+</div>

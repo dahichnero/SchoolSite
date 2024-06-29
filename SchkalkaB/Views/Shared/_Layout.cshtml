@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body class="test">
+    <div class="mainn">
+        <header>
+            <label>Школа 93</label>
+            <div class="links">
+                <a asp-controller="Timetable" asp-action="Main">Главная</a>
+                <a download href="/Расписание звонков.pdf">Звонки</a>
+                <a asp-controller="User" asp-action="Logout">Выйти</a>
+            </div>
+            <label>Помощь мамам, папам и их детям</label>
+        </header>
+
+
+
+        <main>
+            @RenderBody()
+        </main>
+
+
+
+        <footer>
+            <div class="made">
+                <label>Создано специально для школы 93</label>
+                <label>Все права защищены</label>
+                <label>Для вашего спокойствия и понимания</label>
+            </div>
+            <div class="made">
+                <label>Made by dahichnero</label>
+                <label>Be fine!</label>
+            </div>
+            <img src="/paw.png">
+        </footer>
+    </div>
+</body>
+</html>

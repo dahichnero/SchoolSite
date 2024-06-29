@@ -1,0 +1,47 @@
+﻿@using SchkalkaB.Models
+@model TimetableViewModel
+<div class="main_main">
+    <label>Здравствуйте, директор @Model.Director.DirectorName @Model.Director.DirectorName</label>
+    <label>Ученики</label>
+</div>
+<div class="info">
+    <img src="/basik.png">
+    <div class="link_basik">
+        <a asp-controller="Timetable" asp-action="AddEvent">Добавить мероприятие</a>
+        <a asp-controller="Timetable" asp-action="IndexDirector">Расписание</a>
+    </div>
+</div>
+<div class="basik">
+    <label>Ученики:</label>
+    <label>@DateTime.Today.DayOfWeek</label>
+    <label>@DateTime.Today.ToShortDateString()</label>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <table>
+            <tr>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Отчество</td>
+                <td>Класс</td>
+                <td>Логин</td>
+            </tr>
+            @foreach (Student st in Model.Students)
+            {
+                <tr>
+                    <td>@st.Name</td>
+                    <td>@st.LastName</td>
+                    <td>@st.SurName</td>
+                    <td>@st.ClassNavigation.NameClass</td>
+                    <td>@st.UserINavigation.Login</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="paw_extra_two">
+        <img src="/paw_main.png">
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@using SchkalkaB.Models
+@model TimetableViewModel
+<div class="main_main">
+    <label>Здравствуйте, @Model.Teacher.TeacherName @Model.Teacher.TeacherSurName</label>
+    <label>Расписание на день</label>
+</div>
+<div class="info">
+    <img src="/basik.png">
+    <div class="link_basik">
+        <a asp-controller="Timetable" asp-action="Events">Мероприятия</a>
+        <a asp-controller="Timetable" asp-action="IndexTeacher">Главная</a>
+        <a asp-controller="Timetable" asp-action="Adding">Назад</a>
+    </div>
+</div>
+<div class="basik">
+    <label>Списки директоров:</label>
+    <label>@DateTime.Today.DayOfWeek</label>
+    <label>@DateTime.Today.ToShortDateString()</label>
+    <label>Директора</label>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <div class="tab">
+            <div class="tab_two">
+                <label class="tab_l">Имя</label>
+                <label class="tab_l">Фамилия</label>
+                <label class="tab_l">Отчество</label>
+                <label class="tab_l">Статус</label>
+                <label class="tab_l">Логин</label>
+            </div>
+            @foreach (Director director in Model.Directors)
+            {
+                <div class="tab_two">
+                    <label class="tab_l">@director.DirectorName</label>
+                    <label class="tab_l">@director.DirectorLastName</label>
+                    <label class="tab_l">@director.DirectorSurName</label>
+                    <label class="tab_l">@director.StatusNavigation.StatusName</label>
+                    <label class="tab_l">@director.UserINavigation.Login</label>
+                </div>
+                <div class="tab_two">
+                    <a asp-controller="Timetable" asp-action="ChangeDirector" asp-route-directorId="@director.DirectorId">Изменить</a>
+                </div>
+                <div>
+                    <a asp-controller="Timetable" asp-action="DeleteDirector" asp-route-directorId="@director.DirectorId">Удалить</a>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="paw_extra_two">
+        <img src="/paw_main.png">
+    </div>
+</div>

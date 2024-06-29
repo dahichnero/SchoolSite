@@ -1,0 +1,74 @@
+﻿@using SchkalkaB.Models
+@model AddDirectorViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Sign Up Director</title>
+</head>
+<body class="test">
+    <div class="mainn">
+        <header>
+            <label>Школа 93</label>
+            <label>Помощь мамам, папам и их детям</label>
+        </header>
+
+
+
+        <main>
+            <div class="sign">
+                <div class="up">
+                    <label>Регистрация</label>
+                    <form class="signIN" method="post">
+                        <label asp-for="UserId">Логин</label>
+                        <select asp-for="UserId" asp-items="Model.Users">
+                        </select>
+                        <label asp-for="Name">Имя</label>
+                        <input type="text" asp-for="Name" />
+                        <label asp-for="LastName">Фамилия</label>
+                        <input type="text" asp-for="LastName" />
+                        <label asp-for="SurName">Отчество</label>
+                        <input type="text" asp-for="SurName" />
+                        <label asp-for="Birth">Дата рождения:</label>
+                        <input type="date" asp-for="Birth">
+                        <label asp-for="GenderId">Выберите пол:</label>
+                        <select asp-for="GenderId" asp-items="Model.Genders">
+                        </select>
+                        <label asp-for="StatusId">Укажите статус:</label>
+                        <select asp-for="StatusId" asp-items="Model.Statuses">
+                        </select>
+                        <a asp-controller="Timetable" asp-action="Adding">Назад</a>
+                        <div class="si">
+                            <input type="submit" value="Зарегистрировать" />
+                        </div>
+                    </form>
+                </div>
+                <div class="ecc">
+                    <img class="img_main" src="/paw_main.png">
+                    <button class="butt">Указывайте всё правильно!</button>
+                    <img class="img_main" src="/paw_two.png">
+                </div>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <div class="made">
+                <label>Создано специально для школы 93</label>
+                <label>Все права защищены</label>
+                <label>Для вашего спокойствия и понимания</label>
+            </div>
+            <div class="made">
+                <label>Made by dahichnero</label>
+                <label>Be fine!</label>
+            </div>
+            <img src="/paw.png">
+        </footer>
+    </div>
+</body>
+</html>

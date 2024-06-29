@@ -1,0 +1,32 @@
+﻿@using SchkalkaB.Models
+@model AddEventViewModel
+<div class="main_main">
+    <label>Добавление мероприятий</label>
+    <a asp-controller="Timetable" asp-action="IndexDirector"><label>Назад</label></a>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <form class="events" method="post">
+            <label asp-for="NameEvent">Название мероприятия:</label>
+            <input type="text" asp-for="NameEvent">
+            <label asp-for="Smena">Выберите смену:</label>
+            <input type="number" asp-for="Smena">
+            <label asp-for="NumLesson">Укажите номер урока:</label>
+            <input type="number" asp-for="NumLesson">
+            <label asp-for="TeacherId">Выберите учителя:</label>
+            <select asp-for="TeacherId" asp-items="Model.Teachers">
+            </select>
+            <label asp-for="Date">Выберите дату:</label>
+            <input type="date" asp-for="Date">
+            <div class="flexing">
+                <input type="submit" value="Добавить"/>
+            </div>
+        </form>
+    </div>
+    <div class="paw_extra_two">
+        <img src="/paw_main.png">
+    </div>
+</div>

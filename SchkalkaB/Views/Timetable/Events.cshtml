@@ -1,0 +1,51 @@
+﻿@using SchkalkaB.Models
+@model TimetableViewModel
+<div class="main_main">
+    <label>Здравствуйте, @Model.Teacher.TeacherName @Model.Teacher.TeacherSurName</label>
+    <label>Список мероприятий</label>
+</div>
+<div class="info">
+    <img src="/basik.png">
+    <div class="link_basik">
+        <a asp-controller="Timetable" asp-action="IndexTeacher">Расписание</a>
+        @if (User.IsInRole("admin"))
+        {
+            <a asp-controller="Timetable" asp-action="Adding">Добавить</a>
+        }
+    </div>
+</div>
+<div class="basik">
+    <label>Ваши мероприятия:</label>
+    <label>@DateTime.Today.DayOfWeek</label>
+    <label>@DateTime.Today.ToShortDateString()</label>
+    <label>Мероприятия</label>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <table>
+            <tr>
+                <td>Смена</td>
+                <td>Урок</td>
+                <td>Мероприятие</td>
+                <td>Дата</td>
+            </tr>
+            @foreach (Event ev in Model.Events)
+            {
+                <tr>
+                    <td>@ev.Smena</td>
+                    <td>@ev.NumLesson</td>
+                    <td>@ev.NameEvent</td>
+                    <td>@ev.Date</td>
+                </tr>
+            }
+        </table>
+        <button class="butt">все мероприятия обязательны к посещению</button>
+    </div>
+    <div class="paw_extra_two_two">
+        <button class="butt">Будьте внимательны</button>
+        <img src="/paw_main.png">
+    </div>
+</div>

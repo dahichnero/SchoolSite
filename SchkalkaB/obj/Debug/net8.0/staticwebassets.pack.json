@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\arr_one.png",
+      "PackagePath": "staticwebassets\\arr_one.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\arr_two.png",
+      "PackagePath": "staticwebassets\\arr_two.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\basik.png",
+      "PackagePath": "staticwebassets\\basik.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\main.css",
+      "PackagePath": "staticwebassets\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\paw.png",
+      "PackagePath": "staticwebassets\\paw.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\paw_main.png",
+      "PackagePath": "staticwebassets\\paw_main.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\paw_two.png",
+      "PackagePath": "staticwebassets\\paw_two.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\gobab\\SchkalkaB\\SchkalkaB\\wwwroot\\Расписание звонков.pdf",
+      "PackagePath": "staticwebassets\\Расписание звонков.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SchkalkaB.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SchkalkaB.props",
+      "PackagePath": "build\\SchkalkaB.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SchkalkaB.props",
+      "PackagePath": "buildMultiTargeting\\SchkalkaB.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SchkalkaB.props",
+      "PackagePath": "buildTransitive\\SchkalkaB.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

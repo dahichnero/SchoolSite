@@ -1,0 +1,72 @@
+﻿@using SchkalkaB.Models
+@model DeleteStudentViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Sign Up Director</title>
+</head>
+<body class="test">
+    <div class="mainn">
+        <header>
+            <label>Школа 93</label>
+            <label>Помощь мамам, папам и их детям</label>
+        </header>
+
+
+
+        <main>
+            <div class="sign">
+                <div class="up">
+                    <label>Удаление</label>
+                    <form class="signIN" method="post">
+                        <input type="hidden" asp-for="Id" />
+                        <label asp-for="UserId"></label>
+                        <label>@Model.User.Login</label>
+                        <label asp-for="Name"></label>
+                        <label>@Model.Name</label>
+                        <label asp-for="LastName"></label>
+                        <label>@Model.LastName</label>
+                        <label asp-for="SurName"></label>
+                        <label>@Model.SurName</label>
+                        <label asp-for="Birth"></label>
+                        <label>@Model.Birth</label>
+                        <label asp-for="GenderId"></label>
+                        <label>@Model.Gender.GenderName</label>
+                        <label asp-for="ClassId"></label>
+                        <label>@Model.Class.NameClass</label>
+                        <a asp-controller="Timetable" asp-action="SpisokStudents">Назад</a>
+                        <div class="si">
+                            <input type="submit" value="Удалить" />
+                        </div>
+                    </form>
+                </div>
+                <div class="ecc">
+                    <img class="img_main" src="/paw_main.png">
+                    <button class="butt">Указывайте всё правильно!</button>
+                    <img class="img_main" src="/paw_two.png">
+                </div>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <div class="made">
+                <label>Создано специально для школы 93</label>
+                <label>Все права защищены</label>
+                <label>Для вашего спокойствия и понимания</label>
+            </div>
+            <div class="made">
+                <label>Made by dahichnero</label>
+                <label>Be fine!</label>
+            </div>
+            <img src="/paw.png">
+        </footer>
+    </div>
+</body>
+</html>

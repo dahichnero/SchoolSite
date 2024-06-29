@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+@model RegistrationViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/main.css">
+    <title>Sign Up Director</title>
+</head>
+<body class="test">
+    <div class="mainn">
+        <header>
+            <label>Школа 93</label>
+            <label>Помощь мамам, папам и их детям</label>
+        </header>
+
+
+
+        <main>
+            <div class="sign">
+                <div class="up">
+                    <label>Регистрация</label>
+                    <form class="signIN" method="post">
+                        <label asp-for="Username">Логин</label>
+                        <input asp-for="Username" type="text" />
+                        <label asp-for="Password">Пароль</label>
+                        <input asp-for="Password" type="password" />
+                        <label asp-for="RepeatPassword">Повторите пароль</label>
+                        <input asp-for="RepeatPassword" type="password" />
+                        <a asp-controller="Timetable" asp-action="Adding">Назад</a>
+                        <div asp-validation-summary="All" class="error-messages"></div>
+                        <div class="si">
+                            <input type="submit" value="Зарегистрироваться"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="ecc">
+                    <img class="img_main" src="/paw_main.png">
+                    <button class="butt">Указывайте всё правильно!</button>
+                    <img class="img_main" src="/paw_two.png">
+                </div>
+            </div>
+        </main>
+
+
+
+        <footer>
+            <div class="made">
+                <label>Создано специально для школы 93</label>
+                <label>Все права защищены</label>
+                <label>Для вашего спокойствия и понимания</label>
+            </div>
+            <div class="made">
+                <label>Made by dahichnero</label>
+                <label>Be fine!</label>
+            </div>
+            <img src="/paw.png">
+        </footer>
+    </div>
+</body>
+</html>

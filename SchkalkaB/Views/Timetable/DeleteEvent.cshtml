@@ -1,0 +1,32 @@
+﻿@using SchkalkaB.Models
+@model DeleteEventViewModel
+<div class="main_main">
+    <label>Удаление мероприятий</label>
+    <a asp-controller="Timetable" asp-action="SpisokEvents"><label>Назад</label></a>
+</div>
+<div class="super_main">
+    <div class="paw_extra">
+        <img src="/paw_two.png">
+    </div>
+    <div class="finals">
+        <form class="events" method="post">
+            <input type="hidden" asp-for="Id" />
+            <label asp-for="NameEvent"></label>
+            <label>@Model.NameEvent</label>
+            <label asp-for="Smena"></label>
+            <label>@Model.Smena</label>
+            <label asp-for="NumLesson"></label>
+            <label>@Model.NumLesson</label>
+            <label asp-for="TeacherId"></label>
+            <label>@Model.Teacher.TeacherName @Model.Teacher.TeacherLastName @Model.Teacher.TeacherSurName</label>
+            <label asp-for="Date"></label>
+            <label>@Model.Date</label>
+            <div class="flexing">
+                <input type="submit" value="Удалить" />
+            </div>
+        </form>
+    </div>
+    <div class="paw_extra_two">
+        <img src="/paw_main.png">
+    </div>
+</div>
